@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mi primer formulario</h1>
+    <img src="" alt="">
+    <!-- action es el lugar (direccion) donde va ir mi formulario -->
+    <!-- post es un tipo de protocolo en el cual se va enviar los datos del formulario y en caso no el method debe ser get-->
+    <form action="registro.com" method="post">
+        <!-- Para poner titulo a mi formulario debo poner fieldset y legend -->
+        <fieldset>
+            <legend>Titulo de mi formulario</legend>
+            <!-- Hagamos un formulario de tipo iniciar sesion que nos pide correo, password y un boton para enviar los datos -->
+            <!-- La eqtiqueta para poder crear cajas es input -->
+            <!-- Una propiedad de los inputs son los placeholder ,ademas los inputs tambien tienen tipos : email, date,color-->
+            <input name="correo" placeholder="Ingrese un correo" type="email" required>
+            <!-- Existe una etiqueta llamada BR el cual nos da un salto de linea -->
+            <br>
+            <input name="password" type="password" placeholder="Ingrese una contraseña" required>
+            <!-- Para hacer un boton existen varias formas,si quiero un boton que se encargue de enviar los datos ,este boton debe ser de tipo submit -->
+            <br>
+            <button type="submit">Iniciar Sesion</button>
+        </fieldset>
+    </form>
+    <h1>Formulario de registro</h1>
+    <form action="">
+        <fieldset>
+            <legend>Ingresa todos los datos</legend>
+            <!-- quiero pedir Nombre,Apellido,fecha de nacimiento,password,celuar,pais y si esta de acuerdo con los terminos y condiciones -->
+            <!-- Label :es un texto que acompaña a nuestro input -->
+            <label for="nombre">Nombre: </label>
+            <!-- El autofocus es para que la casilla ya este marcada ahi -->
+            <!-- el autocomplete=off no permite el autocompletado, un truco tambien es ponerlo autocomplete=nwe-password -->
+            <input id="nombre" type="text" name="nombre" placeholder="Ingrese su nombre" autofocus autocomplete="off">
+            <br>
+            <br>
+            <label for="Apellido">Apellido: </label>
+            <input id="Apellido "type="text" name="apellido" placeholder="Ingrese su apellido">
+            <br>
+            <br>
+            <label for="fecha">Fecha de nacimiento: </label>
+            <input id="fecha "type="date" name="fecha" min="2000-01-01" max="2022-12-01">
+            <br>
+            <br>
+            <label for="correo">Correo:  </label>
+            <input id="correo" type="email" name="correo" placeholder="Ingrese su correo">
+            <br>
+            <br>
+            <label for="contraseña">Contraseña:  </label>
+            <input id="contraseña" type="password" name="contraseña" placeholder="Ingrese su contraseña" maxlength="9">
+            <br>
+            <br>
+            <!-- Cuando pongo input de tipo number unicamente habre del 0 al 9 -->
+            <!-- cuand pongo tipo tel este muestra del 0 al 9 y "*" y "+" -->
+            <label for="numero">Celular: </label>
+            <input id="numero" type="number" name="numero" placeholder="Ingrese su celular">
+            <!-- una lista despegable se llama select y los elementos de esta lista se llama options -->
+            <br>
+            <br>
+            <label for="pais">Pais</label>
+            <select name="pais" id="pais">
+                <!-- value es el valor que se envia al formulario -->
+                <!-- el disabled selected es para que no se pueda escoger,esto sirve para poner un placeholder -->
+                <option value="" disabled selected>Seleccione un pais</option>
+                <option value="Peru">Peru</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Venezuela">Venezuela</option>
+                <option value="Ecuador">Ecuador</option>
+            </select>
+            <br>
+            <br>
+            <label for="terminos">
+                <!-- cuando un input sea de tipo chekbox o radiobutton este input se recomienda ponerlo dentro de label -->
+                <input id="terminos" required type="checkbox" name="terminos"> Acepta los terminos y condiciones?
+            </label>
+            <br>
+            <br>
+            <!-- Cuando pones checked se marca por defecto -->
+            <label for="suscripcion"><input id="suscripcion" type="radio" name="suscripcion" checked>suscripcion 1</label>
+            <label for="suscripcion"><input id="suscripcion" type="radio" name="suscripcion">suscripcion 2</label>
+            <label for="suscripcion"><input id="suscripcion" type="radio" name="suscripcion">suscripcion 3</label>
+            <br>
+            <br>
+            <label for="texto">Ingrese un comentario: </label>
+            <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Ingrese un texto sobre usted" minlength="30" maxlength="140"></textarea>
+            <br>
+            <br>
+            <button type="submit">Registrarse</button>
+            <!-- agregamos un textarea -->
+            
+        </fieldset>
+    </form>
+</body>
+</html>
